@@ -21,6 +21,8 @@ This is the source code used at the ICT/AI seminar part3
 ** Usage
 *** [[./kinoko_takenoko][./kinoko_takenoko/]]
 #+begin_src sh
+$ git clone https://github.com/MinenoLab/ai-iotSeminar3.git
+$ cd ai-iotSeminar3/kinoko_takenoko
 $ python3 -m venv .
 $ source bin/activate
 $ sudo apt install -y libatlas-base-dev #numpyを使用できるように
