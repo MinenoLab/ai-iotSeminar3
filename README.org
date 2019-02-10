@@ -21,11 +21,13 @@ This is the source code used at the ICT/AI seminar part3
 ** Usage
 *** [[./kinoko_takenoko][./kinoko_takenoko/]]
 #+begin_src sh
-$ python3 -m venv .
+$ git clone https://github.com/MinenoLab/ai-iotSeminar3.git
+$ cd ai-iotSeminar3/kinoko_takenoko
+$ python3 -m venv . #仮想環境作成
 $ source bin/activate
 $ sudo apt install -y libatlas-base-dev #numpyを使用できるように
 $ sudo apt install -y imagemagick #画像ビューワーインストール
-$ pip3 install -r requirements.txt #ライブラリインストール
+$ pip3 install -r requirements.txt #Pythonライブラリインストール
 $ python3 test_one.py -m CNN.model -d data/test/kinoko/0xxx.jpg #1枚のテストデータを判別
 $ python3 test_all.py -m CNN.model -d data/test -o result # 全テストデータを判別
 #+end_src
