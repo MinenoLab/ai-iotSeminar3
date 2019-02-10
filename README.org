@@ -3,7 +3,7 @@
 This is the source code used at the ICT/AI seminar part3
 
 ** File Description
-*** [[./kinoko_takenoko][./kinoko_takenoko]]
+*** [[./kinoko_takenoko][./kinoko_takenoko/]]
   - [[./kinoko_takenoko/test_all.py][test_all.py]]
     - The program evaluating the performance of the model to use all test data sets.
   - [[./kinoko_takenoko/test_one.py][test_one.py]]
@@ -16,18 +16,18 @@ This is the source code used at the ICT/AI seminar part3
     - The directory saved confusion matrix and AUC-ROC curve.
   - [[./kinoko_takenoko/data][data/]]
     - traing and testing data sets.
-    - traing sets was got form [[https://azure-recipe.kc-cloud.jp/2017/12/custom_vision_2017adcal/][ナレコムAzureレシピ]].
+    - traing sets got from [[https://azure-recipe.kc-cloud.jp/2017/12/custom_vision_2017adcal/][ナレコムAzureレシピ]].
 
 ** Usage
-*** [[./kinoko_takenoko][kinoko_takenoko]]
+*** [[./kinoko_takenoko][./kinoko_takenoko/]]
 #+begin_src sh
-python3 -m venv .
-source bin/activate
-sudo apt install -y libatlas-base-dev #numpyを使用できるように
-sudo apt install -y imagemagick #画像ビューワーインストール
-pip3 install -r requirements.txt #ライブラリインストール
-python3 test_one.py -m CNN.model -d data/test/kinoko/0xxx.jpg #1枚のテストデータを判別
-python3 test_all.py -m CNN.model -d data/test -o result # 全テストデータを判別
+$ python3 -m venv .
+$ source bin/activate
+$ sudo apt install -y libatlas-base-dev #numpyを使用できるように
+$ sudo apt install -y imagemagick #画像ビューワーインストール
+$ pip3 install -r requirements.txt #ライブラリインストール
+$ python3 test_one.py -m CNN.model -d data/test/kinoko/0xxx.jpg #1枚のテストデータを判別
+$ python3 test_all.py -m CNN.model -d data/test -o result # 全テストデータを判別
 #+end_src
 
 ** Raspberry Pi Image file
