@@ -24,6 +24,9 @@ This is the source code used at the ICT/AI seminar part3
     - The program for object recognition.
   - [[./recog_detect/img][img/]]
     - Example image data
+  - [[./recog_detect/requirements.txt][requirements.txt]]
+    - Files containing a list of items to be installed using pip install.
+
 
 *** [[./kinoko_takenoko][./kinoko_takenoko/]]
   - [[./kinoko_takenoko/test_all.py][test_all.py]]
@@ -41,10 +44,12 @@ This is the source code used at the ICT/AI seminar part3
     - traing sets got from [[https://azure-recipe.kc-cloud.jp/2017/12/custom_vision_2017adcal/][ナレコムAzureレシピ]].
 
 *** ./fasnhion-MNIS/
-  - [[./fashion-MNIST/train.py][train.py]]
+  - train.py
     - The program for fashion-MNIST classify.
-  - [[./fashion-MNIST/Fashion-MNIST.ipynb][Fashion-MNIST.ipynb]]
+  - Fashion-MNIST.ipynb
     - Jupyter notebook for fashion-MNIST classify.
+  - requirements.txt
+    - Files containing a list of items to be installed using pip install.
 
 ** Usage
 *** [[./exa/][./exa/]]
