@@ -1,0 +1,3 @@
+[submodule "fashion-MNIST"]
+	path = fashion-MNIST
+	url = https://github.com/YusukeSuzuki1213/fashion-MNIST.git

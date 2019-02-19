@@ -5,9 +5,9 @@ This is the source code used at the ICT/AI seminar part3
 ** File Description
 *** [[./exa][./exa/]]
   - [[./exa/for.py][for.py]]
-    - for statment sample
-  - [[./exa/if][if.py]]
-    - if statment sample
+    - for statment sample.
+  - [[./exa/if.py][if.py]]
+    - if statment sample.
   - [[./exa/kansu0.py][kansu0.py]]
     - Function that has argmuments.
   - [[./exa/kansu1.py][kansu1.py]]
@@ -40,7 +40,6 @@ This is the source code used at the ICT/AI seminar part3
     - traing and testing data sets.
     - traing sets got from [[https://azure-recipe.kc-cloud.jp/2017/12/custom_vision_2017adcal/][ナレコムAzureレシピ]].
 
-
 ** Usage
 *** [[./exa/][./exa/]]
 #+begin_src sh
@@ -57,10 +56,10 @@ $ python3 kansu2.py
 #+begin_src sh
 $ git clone https://github.com/MinenoLab/ai-iotSeminar3.git
 $ cd ai-iotSeminar3/recog_detect
+$ pip3 install -r requirements.txt #Pythonライブラリインストール
 $ python3 image_detect.py img/
 $ python3 image_recog.py img/
 #+end_src
-
 
 *** [[./kinoko_takenoko][./kinoko_takenoko/]]
 #+begin_src sh
@@ -72,7 +71,6 @@ $ pip3 install -r requirements.txt #Pythonライブラリインストール
 $ python3 test_one.py -m CNN.model -d data/test/kinoko/0xxx.jpg #1枚のテストデータを判別
 $ python3 test_all.py -m CNN.model -d data/test -o result # 全テストデータを判別
 #+end_src
-
 
 ** Raspberry Pi Image file
 If you need the image file of raspberry pi, please downloads the image file following link.
