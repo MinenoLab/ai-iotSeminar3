@@ -1,3 +1,4 @@
-tesorflow
+tensorflow
 keras
 chainercv
+matplotlib
