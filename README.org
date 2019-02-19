@@ -3,6 +3,28 @@
 This is the source code used at the ICT/AI seminar part3
 
 ** File Description
+*** [[./exa][./exa/]]
+  - [[./exa/for.py][for.py]]
+    - for statment sample
+  - [[./exa/if][if.py]]
+    - if statment sample
+  - [[./exa/kansu0.py][kansu0.py]]
+    - Function that has argmuments.
+  - [[./exa/kansu1.py][kansu1.py]]
+    - Function that has argmuments.
+    - Function that does'nt have return value.
+  - [[./exa/kansu2.py][kansu2.py]]
+    - Function that has argmuments.
+    - Fuction that have return value.
+
+*** [[./recog_detect][./recog_detect/]]
+  - [[./recog_detect/image_detect.py][image_detect.py]]
+    - The program for object detection.
+  - [[./recog_detect/image_recog.py][image_recog.py]]
+    - The program for object recognition.
+  - [[./recog_detect/img][img/]]
+    - Example image data
+
 *** [[./kinoko_takenoko][./kinoko_takenoko/]]
   - [[./kinoko_takenoko/test_all.py][test_all.py]]
     - The program evaluating the performance of the model to use all test data sets.
@@ -18,7 +40,28 @@ This is the source code used at the ICT/AI seminar part3
     - traing and testing data sets.
     - traing sets got from [[https://azure-recipe.kc-cloud.jp/2017/12/custom_vision_2017adcal/][ナレコムAzureレシピ]].
 
+
 ** Usage
+*** [[./exa/][./exa/]]
+#+begin_src sh
+$ git clone https://github.com/MinenoLab/ai-iotSeminar3.git
+$ cd ai-iotSeminar3/exa
+$ python3 for.py
+$ python3 if.py
+$ python3 kansu0.py
+$ python3 kansu1.py
+$ python3 kansu2.py
+#+end_src
+
+*** [[./recog_detect/][./recog_detect/]]
+#+begin_src sh
+$ git clone https://github.com/MinenoLab/ai-iotSeminar3.git
+$ cd ai-iotSeminar3/recog_detect
+$ python3 image_detect.py img/
+$ python3 image_recog.py img/
+#+end_src
+
+
 *** [[./kinoko_takenoko][./kinoko_takenoko/]]
 #+begin_src sh
 $ git clone https://github.com/MinenoLab/ai-iotSeminar3.git
@@ -29,6 +72,7 @@ $ pip3 install -r requirements.txt #Pythonライブラリインストール
 $ python3 test_one.py -m CNN.model -d data/test/kinoko/0xxx.jpg #1枚のテストデータを判別
 $ python3 test_all.py -m CNN.model -d data/test -o result # 全テストデータを判別
 #+end_src
+
 
 ** Raspberry Pi Image file
 If you need the image file of raspberry pi, please downloads the image file following link.
