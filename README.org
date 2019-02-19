@@ -40,6 +40,12 @@ This is the source code used at the ICT/AI seminar part3
     - traing and testing data sets.
     - traing sets got from [[https://azure-recipe.kc-cloud.jp/2017/12/custom_vision_2017adcal/][ナレコムAzureレシピ]].
 
+*** [[./fashion-MNIST][./fasnhion-MNIST/]]
+  - [[./fashion-MNIST/train.py][train.py]]
+    - The program for fashion-MNIST classify.
+  - [[./fashion-MNIST/Fashion-MNIST.ipynb][Fashion-MNIST.ipynb]]
+    - Jupyter notebook for fashion-MNIST classify.
+
 ** Usage
 *** [[./exa/][./exa/]]
 #+begin_src sh
@@ -71,6 +77,20 @@ $ pip3 install -r requirements.txt #Pythonライブラリインストール
 $ python3 test_one.py -m CNN.model -d data/test/kinoko/0xxx.jpg #1枚のテストデータを判別
 $ python3 test_all.py -m CNN.model -d data/test -o result # 全テストデータを判別
 #+end_src
+
+*** [[./fashion-MNIST][./fashion-MNIST/]]
+- Using local PC
+#+begin_src sh
+$ git clone https://github.com/MinenoLab/ai-iotSeminar3.git
+$ git submodule init
+$ git submodule update
+$ cd ai-iotSeminar3/fashion-MNIST
+$ pip3 install -r requirements.txt #Pythonライブラリインストール
+$ python3 train.py
+#+end_src
+- Using Google Colaboratory
+[[https://colab.research.google.com/github/YusukeSuzuki1213/fashion-MNIST/blob/master/Fashion-MNIST.ipynb][Executing on Google Colaboratory]]
+
 
 ** Raspberry Pi Image file
 If you need the image file of raspberry pi, please downloads the image file following link.

@@ -1,2 +1,3 @@
 tesorflow
 keras
+chainercv
