@@ -8,12 +8,11 @@ This is the source code used at the ICT/AI seminar part3
     - for statment sample.
   - [[./exa/if.py][if.py]]
     - if statment sample.
+  - [[./exa/while.py][while.py]]
+    - while statment sample.
   - [[./exa/kansu0.py][kansu0.py]]
     - Function that has argmuments.
   - [[./exa/kansu1.py][kansu1.py]]
-    - Function that has argmuments.
-    - Function that does'nt have return value.
-  - [[./exa/kansu2.py][kansu2.py]]
     - Function that has argmuments.
     - Fuction that have return value.
 
@@ -26,7 +25,6 @@ This is the source code used at the ICT/AI seminar part3
     - Example image data
   - [[./recog_detect/requirements.txt][requirements.txt]]
     - Files containing a list of items to be installed using pip install.
-
 
 *** [[./kinoko_takenoko][./kinoko_takenoko/]]
   - [[./kinoko_takenoko/test_all.py][test_all.py]]
