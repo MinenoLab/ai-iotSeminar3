@@ -7,22 +7,20 @@ import chainer.links as L
 import chainer.initializers as I
 import numpy as np
 
-# 畳み込みニューラルネットワークの定義
 class CNN(chainer.Chain):
     def __init__(self, n_out):
-        w = I.Normal(scale=0.05) # モデルパラメータの初期化
+        w = I.Normal(scale=0.05)
         super(CNN, self).__init__(                        
-            conv1=L.Convolution2D(3, 16, 5, 1, 0), # 1層目の畳み込み層（フィルタ数は16）
-            conv2=L.Convolution2D(16, 32, 5, 1, 0), # 2層目の畳み込み層（フィルタ数は32）
-            conv3=L.Convolution2D(32, 64, 5, 1, 0), # 3層目の畳み込み層（フィルタ数は64）
-            l4=L.Linear(None, n_out, initialW=w), #クラス分類用
+            conv1=L.Convolution2D(3, 16, 5, 1, 0), 
+            conv2=L.Convolution2D(16, 32, 5, 1, 0),
+            conv3=L.Convolution2D(32, 64, 5, 1, 0),
+            l4=L.Linear(None, n_out, initialW=w), 
         )
     
     def __call__(self, x):
-        h1 = F.max_pooling_2d(F.relu(self.conv1(x)), ksize=2, stride=2) # 最大値プーリングは2×2，活性化関数はReLU
+        h1 = F.max_pooling_2d(F.relu(self.conv1(x)), ksize=2, stride=2) 
         h2 = F.max_pooling_2d(F.relu(self.conv2(h1)), ksize=2, stride=2) 
         h3 = F.max_pooling_2d(F.relu(self.conv3(h2)), ksize=2, stride=2)
-        # 9x9,64ch
         return self.l4(h3)
 
 
@@ -44,7 +42,8 @@ def main():
     data = data.transpose(2,0,1)
 
     # モデルから判別
-    model = L.Classifier(CNN(2))  # CNNにする
+    model = L.Classifier(CNN(2))
+    
     chainer.serializers.load_npz(args.model, model)
     y = model.predictor(chainer.Variable(np.array([data])))
     y = F.softmax(y).data
@@ -52,10 +51,8 @@ def main():
     pred_label = "takenoko" if y.argmax() == 1  else "kinoko"
     draw.text((2,2),pred_label+'['+str(round(float(pred_prob)*100,2))+'%]',fill=(0,100,0,255))
 
-    #結果表示
     im.show()
-
-
+    
 if __name__ == '__main__':
     main()
 
