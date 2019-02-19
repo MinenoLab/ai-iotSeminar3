@@ -40,7 +40,7 @@ This is the source code used at the ICT/AI seminar part3
     - traing and testing data sets.
     - traing sets got from [[https://azure-recipe.kc-cloud.jp/2017/12/custom_vision_2017adcal/][ナレコムAzureレシピ]].
 
-*** [[./fashion-MNIST][./fasnhion-MNIST/]]
+*** ./fasnhion-MNIS/
   - [[./fashion-MNIST/train.py][train.py]]
     - The program for fashion-MNIST classify.
   - [[./fashion-MNIST/Fashion-MNIST.ipynb][Fashion-MNIST.ipynb]]
