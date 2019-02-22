@@ -15,6 +15,7 @@ import chainer.functions as F
 import chainer.links as L
 import chainer.initializers as I
 import numpy as np
+import shutil
 
 class CNN(chainer.Chain):
     def __init__(self, n_out):
@@ -39,7 +40,7 @@ def print_cmx(y_true, x_pred,image):
     print('F値', f1_score(y_true, x_pred))
 
     cm = confusion_matrix(y_true, x_pred)
-    plt.figure(figsize=(10,9))
+    plt.figure(figsize=(7,5))
     plt.clf()
     plt.imshow(cm, interpolation='nearest', cmap=plt.cm.Wistia)
     classNames = ['Negative\n(label: kinoko)','Positive\n(label: takenoko)']
@@ -88,32 +89,29 @@ def main():
     test = []
     for c in os.listdir(args.datadir):
         label = 'kinoko' if 'kinoko' in c else 'takenoko'
-        d = os.path.join(args.datadir, c)        
-        imgs = os.listdir(d)
-        for i in [f for f in imgs if ('jpg' in f)]:
-            data = Image.open(os.path.join(d, i))
-            data = np.asarray(data,dtype=np.float32)
-            data = data.transpose(2,0,1)
-            test.append([data,label, os.path.join(d,i)])
-
+        data = Image.open(os.path.join(args.datadir, c))
+        data = np.asarray(data,dtype=np.float32)
+        data = data.transpose(2,0,1)
+        test.append([data,label, os.path.join(args.datadir,c), c])
+        
     # モデルから判別
     model = L.Classifier(CNN(2))
     y_true=[] #実際の
     x_pred=[] #モデルの識別結果
     chainer.serializers.load_npz(args.model,model)
-    for data , label ,name in  test:
-        #print(i.shape)
+    for data , label ,path, name  in  test:
         y = model.predictor(chainer.Variable(np.array([data])))
         y = F.softmax(y).data
         c = y.argmax()
         y_true.append((1 if 'takenoko' in label else 0))
         x_pred.append(c)
-        print(name+
+        print(path+
               ' was predicted as '+
               ('takenoko' if c==1 else 'kinoko  ')+
               ' with a '+str(round(float(y.max(axis=1))*100,2))+
               '% possibility')
-
+        shutil.copy(path, "./data/pred/"+('takenoko/' if c==1 else 'kinoko/')+name)
+        
     #判別結果
     print_cmx(y_true, x_pred, args.outdir)
     print_roc(y_true, x_pred, args.outdir)
