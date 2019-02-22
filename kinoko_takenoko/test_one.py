@@ -29,7 +29,7 @@ def main():
     parser = argparse.ArgumentParser(description='きのこの山、たけのこの里判別(1枚のテストデータ)')
     parser.add_argument('--model', '-m', type=str, default="CNN.model",
                         help='model file name')
-    parser.add_argument('--data', '-d', default='data/test/takenoko/0045.jpg',
+    parser.add_argument('--data', '-d', default='data/test/takenoko_0045.jpg',
                         help='location of image data')
     args = parser.parse_args()
     
@@ -50,7 +50,6 @@ def main():
     pred_prob = y.max(axis=1)
     pred_label = "takenoko" if y.argmax() == 1  else "kinoko"
     draw.text((2,2),pred_label+'['+str(round(float(pred_prob)*100,2))+'%]',fill=(0,100,0,255))
-
     im.show()
     
 if __name__ == '__main__':
