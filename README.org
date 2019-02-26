@@ -3,18 +3,20 @@
 This is the source code used at the ICT/AI seminar part3
 
 ** File Description
-*** [[./exa][./exa/]]
-  - [[./exa/for.py][for.py]]
+*** [[./practice][./practice/]]
+  - [[./practice/for.py][for.py]]
     - for statment sample.
-  - [[./exa/if.py][if.py]]
+  - [[./practice/if.py][if.py]]
     - if statment sample.
-  - [[./exa/while.py][while.py]]
+  - [[./practice/while.py][while.py]]
     - while statment sample.
-  - [[./exa/kansu0.py][kansu0.py]]
+  - [[./practice/kansu0.py][kansu0.py]]
     - Function that has argmuments.
-  - [[./exa/kansu1.py][kansu1.py]]
+  - [[./practice/kansu1.py][kansu1.py]]
     - Function that has argmuments.
     - Fuction that have return value.
+  - [[./practice/while.py][while.py]]
+    - while statment smaple.
 
 *** [[./recog_detect][./recog_detect/]]
   - [[./recog_detect/image_detect.py][image_detect.py]]
