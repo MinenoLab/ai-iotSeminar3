@@ -54,24 +54,25 @@ def print_cmx(y_true, x_pred,image):
     for i in range(2):
         for j in range(2):
             plt.text(j,i, str(s[i][j])+" = "+str(cm[i][j]))
+    plt.colorbar()
     plt.savefig(os.path.join(image,'confusin_matrix_test.png'))
 
     
 
-def print_roc(y_true, x_pred,image):
-    # FPR, TPR(, しきい値) を算出
-    fpr, tpr, thresholds = roc_curve(y_true, x_pred)
-    # AUC算出
-    a = auc(fpr, tpr)
-    # ROC曲線をプロット
-    plt.figure() 
-    plt.plot(fpr, tpr, label='ROC curve (area = %.2f)'%a)
-    plt.legend()
-    plt.title('ROC curve')
-    plt.xlabel('False Positive Rate')
-    plt.ylabel('True Positive Rate')
-    plt.grid(True)
-    plt.savefig(os.path.join(image,'roc_curve_auc.png'))
+# def print_roc(y_true, x_pred,image):
+#     # FPR, TPR(, しきい値) を算出
+#     fpr, tpr, thresholds = roc_curve(y_true, x_pred)
+#     # AUC算出
+#     a = auc(fpr, tpr)
+#     # ROC曲線をプロット
+#     plt.figure() 
+#     plt.plot(fpr, tpr, label='ROC curve (area = %.2f)'%a)
+#     plt.legend()
+#     plt.title('ROC curve')
+#     plt.xlabel('False Positive Rate')
+#     plt.ylabel('True Positive Rate')
+#     plt.grid(True)
+#     plt.savefig(os.path.join(image,'roc_curve_auc.png'))
 
     
 def main():
@@ -105,7 +106,7 @@ def main():
         c = y.argmax()
         y_true.append((1 if 'takenoko' in label else 0))
         x_pred.append(c)
-        print(path+
+        print(name+
               ' was predicted as '+
               ('takenoko' if c==1 else 'kinoko  ')+
               ' with a '+str(round(float(y.max(axis=1))*100,2))+
@@ -114,7 +115,7 @@ def main():
         
     #判別結果
     print_cmx(y_true, x_pred, args.outdir)
-    print_roc(y_true, x_pred, args.outdir)
+   # print_roc(y_true, x_pred, args.outdir)
 
 
 if __name__ == '__main__':
