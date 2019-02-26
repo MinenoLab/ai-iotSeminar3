@@ -1,5 +1,5 @@
 def sample(a,b):
     c = a + b
     return c
-    
-print(sample(1,2))
+d = sample(1,2)
+print(d)
