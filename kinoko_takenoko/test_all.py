@@ -34,10 +34,10 @@ class CNN(chainer.Chain):
         return self.l4(h3)
 
 def print_cmx(y_true, x_pred,image):
-    print('正解率(Accuracy)', accuracy_score(y_true, x_pred))
-    print('適合率、精度(Precision)', precision_score(y_true, x_pred))
-    print('再現率、検出率(Recall)', recall_score(y_true, x_pred))
-    print('F値', f1_score(y_true, x_pred))
+    # print('正解率(Accuracy)', accuracy_score(y_true, x_pred))
+    # print('適合率、精度(Precision)', precision_score(y_true, x_pred))
+    # print('再現率、検出率(Recall)', recall_score(y_true, x_pred))
+    # print('F値', f1_score(y_true, x_pred))
 
     cm = confusion_matrix(y_true, x_pred)
     plt.figure(figsize=(7,5))
