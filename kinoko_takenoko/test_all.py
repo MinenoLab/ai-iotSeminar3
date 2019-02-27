@@ -43,8 +43,8 @@ def print_cmx(y_true, x_pred,image):
     for i in range(2):
         for j in range(2):
             plt.text(j,i, str(s[i][j])+" = "+str(cm[i][j]))#分類結果を作成
-    plt.colorbar()# カラーバー
-    plt.imshow(cm, interpolation='nearest', cmap=plt.cm.Wistia)#描画
+    im = plt.imshow(cm, interpolation='nearest', cmap=plt.cm.Wistia)#描画
+    plt.colorbar(im)# カラーバー
     plt.savefig(os.path.join(image,'confusin_matrix_test.png'))# 保存
 
         
