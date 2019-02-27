@@ -15,8 +15,8 @@ This is the source code used at the ICT/AI seminar part3
   - [[./practice/kansu1.py][kansu1.py]]
     - Function that has argmuments.
     - Fuction that have return value.
-  - [[./practice/while.py][while.py]]
-    - while statment smaple.
+  - [[./practice/random.py][random.py]]
+    - Program that use random library.
 
 *** [[./recog_detect][./recog_detect/]]
   - [[./recog_detect/image_detect.py][image_detect.py]]
@@ -52,15 +52,16 @@ This is the source code used at the ICT/AI seminar part3
     - Files containing a list of items to be installed using pip install.
 
 ** Usage
-*** [[./exa/][./exa/]]
+*** [[./practice/][./practice/]]
 #+begin_src sh
 $ git clone https://github.com/MinenoLab/ai-iotSeminar3.git
-$ cd ai-iotSeminar3/exa
+$ cd ai-iotSeminar3/practice
 $ python3 for.py
 $ python3 if.py
+$ python3 while.py
 $ python3 kansu0.py
 $ python3 kansu1.py
-$ python3 kansu2.py
+$ python3 random.py
 #+end_src
 
 *** [[./recog_detect/][./recog_detect/]]
@@ -89,9 +90,8 @@ $ python3 test_all.py -m CNN.model -d data/test -o result # 全テストデー�
 - Using local PC
 #+begin_src sh
 $ git clone https://github.com/MinenoLab/ai-iotSeminar3.git
-$ git submodule init
-$ git submodule update
 $ cd ai-iotSeminar3/fashion-MNIST
+$ git submodule update -i 
 $ pip3 install -r requirements.txt #Pythonライブラリインストール
 $ python3 train.py
 #+end_src
