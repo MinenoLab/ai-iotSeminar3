@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from PIL import Image, ImageDraw, ImageFont
 import argparse
 import chainer
