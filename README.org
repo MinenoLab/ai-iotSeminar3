@@ -15,7 +15,7 @@ This is the source code used at the ICT/AI seminar part3
   - [[./practice/kansu1.py][kansu1.py]]
     - Function that has argmuments.
     - Fuction that have return value.
-  - [[./practice/random.py][random.py]]
+  - [[./practice/rand.py][rand.py]]
     - Program that use random library.
 
 *** [[./recog_detect][./recog_detect/]]
@@ -61,7 +61,7 @@ $ python3 if.py
 $ python3 while.py
 $ python3 kansu0.py
 $ python3 kansu1.py
-$ python3 random.py
+$ python3 rand.py
 #+end_src
 
 *** [[./recog_detect/][./recog_detect/]]
@@ -99,10 +99,8 @@ $ python3 train.py
 [[https://colab.research.google.com/github/YusukeSuzuki1213/fashion-MNIST/blob/master/Fashion-MNIST.ipynb][Executing on Google Colaboratory]]
 
 ** Raspberry Pi Image file
-If you need the image file of raspberry pi, please downloads the image file following link.
-  - SD card capacity is required 32 GB
-  - [[https://www.minelab.jp/public_data/raspi_img.zip][RasPi image]]
-  - [[https://www.raspberrypi.org/documentation/installation/installing-images/README.md][Installation guide]]
+If you want raspberry pi image on which the program of this repository works, please download it from the following URL.
+  - [[https://www.minelab.jp/public_data/AI_IoT3.zip][Rasberry Pi Image]](SD card capacity is required 32 GB)
 
 ** 参考資料
 The kinoko_takenoko program has referred to the following.
